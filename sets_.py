@@ -1,10 +1,7 @@
-Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
-
 s1 = {2, 4, 6, 8, 10}
 s2 = {3, 6, 9, 12}
 
-# union
+# ********************* union() *****************************
 s1.union(s2)
 {2, 3, 4, 6, 8, 9, 10, 12}
 s1
@@ -12,7 +9,7 @@ s1
 s2
 {9, 3, 12, 6}
 
-# intersection
+# ********************* intersection() *************************
 s1.intersection(s2)
 {6}
 s1
@@ -20,7 +17,7 @@ s1
 s2
 {9, 3, 12, 6}
 
-# difference
+# ****************** difference() ****************************
 s1.difference(s2)
 {8, 2, 10, 4}
 
@@ -32,7 +29,7 @@ s1 - s2
 s2 - s1
 {9, 3, 12}
 
-# concatenation
+# **************** concatenation ***************************
 "hai" + "hello"
 'haihello'
 [1, 2] + [3, 4]
@@ -40,13 +37,15 @@ s2 - s1
 (1, 2) + (3, 4)
 (1, 2, 3, 4)
 
+s1 = {2, 4, 6, 8, 10}
+s2 = {3, 6, 9, 12}
 s1 + s2
 Traceback (most recent call last):
   File "<pyshell#27>", line 1, in <module>
     s1 + s2
 TypeError: unsupported operand type(s) for +: 'set' and 'set'
 
-
+# ******************* update() ******************************
 s1.union(s2)
 {2, 3, 4, 6, 8, 9, 10, 12}
 s1
@@ -75,6 +74,8 @@ a.update(b)
 a
 {'insta', 'gmail', 'google', 'fb'}
 
+
+# ******************************** intersection_update() **************************
 # intersection_update
 a = {"google", "gmail"}
 b = {"fb", "insta", "google"}
@@ -87,6 +88,7 @@ a
 a = {"google", "gmail"}
 b = {"fb", "insta", "google"}
 
+# ********************************** difference_update() *****************************
 a.difference_update(b)
 a
 {'gmail'}
@@ -99,15 +101,14 @@ b
 a
 {'gmail', 'google'}
 
-
-# symmetric_difference
+# ********************************* symmetric_difference() ***************************
 a = {"google", "gmail"}
 b = {"fb", "insta", "google"}
 
 a.symmetric_difference(b)
 {'insta', 'gmail', 'fb'}
 
-# symmetric_difference_update
+# ************************* symmetric_difference_update() ***************************
 a = {"google", "gmail"}
 b = {"fb", "insta", "google"}
 
@@ -115,7 +116,7 @@ a.symmetric_difference_update(b)
 a
 {'insta', 'gmail', 'fb'}
 
-
+# ************************* hash values ********************************************
 hash(10)
 10
 hash(1.2)
@@ -136,7 +137,7 @@ hash((1, 2))
 -3550055125485641917
 
 
-# empty datatypes
+# ***************************** empty datatypes ********************************
 l = list(), []
 s = str(), ""
 t = tuple(), ()
@@ -147,7 +148,7 @@ type(s1)
 <class 'dict'>
 
 
-# tuple activity
+# *********************************** tuple activity *************************************
 
 a = (1, )
 
@@ -203,7 +204,7 @@ print((t1, t2))
 ((1, 2), (3, 4))
 
 
-# adding elements to a set
+# ******************************** adding elements to a set **********************************
 
 b = {"fb", "insta", "google"}
 b.update("gmail")
@@ -261,7 +262,7 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 
 
-# removing elements from a set
+# ****************************** removing elements from a set ***********************************
 b
 {False, 1, 'google', 'fb', 'insta'}
 b.remove(False)
@@ -299,6 +300,7 @@ Traceback (most recent call last):
     b
 NameError: name 'b' is not defined
 
+# ************************** boolean methods ****************************
 s1 = {2, 4, 6, 8, 10}
 s2 = {1, 3, 5}
 s1.intersection(s2)
