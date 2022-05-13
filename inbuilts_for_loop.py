@@ -182,7 +182,6 @@ for city, (min_, max_) in temperatures.items():
 
 
 
-
     
 
 
