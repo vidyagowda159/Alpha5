@@ -65,6 +65,72 @@ def greet(msg="hai everyone"):
 #greet("Good morning")
 
 # *******************************************************
+#  Write a function that returns the last digit of an integer
+
+def last_digit(num):
+    return num % 10
+
+
+# print(last_digit(123))
+
+# ************************************************************
+# Make a function named tail that takes a sequence (like a list, string, or tuple) and a
+# number n and returns the last n elements from the given sequence, as a list.
+
+def tail(sequence, n):
+    return list(sequence[-n:])
+
+
+# print(tail("hello", 2))
+
+# ************************************************************
+# Function to check if a given number is Fibonacci number
+
+
+def fib(number):
+    a = 0
+    b = 1
+    
+    while a <= number:
+        if a == number:
+            return f"{number} is a fibonacci number"
+        
+        c = a + b
+        a, b = b, c
+        
+
+    else:
+        return f"{number} is not a fibonacci number"
+
+#print(fib(19))
+            
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
