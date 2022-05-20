@@ -8,6 +8,3 @@ I am John
 
 programming in python is fun
 java is fun
-
-
-

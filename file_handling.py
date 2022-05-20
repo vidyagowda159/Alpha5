@@ -1,5 +1,6 @@
 import os
-from collections import defaultdict, Counter
+from collections import defaultdict, Counter, deque
+from itertools import islice
 
 # directories
 
@@ -230,7 +231,7 @@ with open("access-log.txt") as file:
             dd[words[0]] += 1
     print(dd)
 
-"""
+
 
 # most occurred ip address in the access-log file
 
@@ -259,6 +260,114 @@ c = Counter(l)
 print(c)        # counter object -> dictionary of element of its count pair in descending order
 print(c.most_common())  # list of tuples of element and its count pair
 print(c.most_common(n)) # list of tuple of the n maximum repeated elements (n -> integer)
+"""
+
+# ******** read nth line from a file ************
+n = 15
+with open("access-log.txt") as file:
+    for line_no, line in enumerate(file, start=1):
+        if line_no == n:
+            print(line)
+
+# islice
+with open("access-log.txt") as file:
+    lines = islice(file, n-1, n)
+    print(list(lines))
+
+
+# ********* read first n lines *************
+n = 6
+with open("access-log.txt") as file:
+    for line_no, line in enumerate(file, start=1):
+        if line_no <= n:
+            print(line)
+
+# using islice
+with open("access-log.txt") as file:
+    lines = islice(file, n)
+    print(list(lines))
+
+
+# ********* read 10th to 15th lines **************
+start = 10
+end = 15
+
+# islice
+with open("access-log.txt") as file:
+    lines = islice(file, start-1, end)
+    for line in lines:
+        print(line)
+
+
+# enumerate
+with open("access-log.txt") as file:
+    for line_no, line in enumerate(file, start=1):
+        if 10 <= line_no <= 15:
+            print(line)
+
+
+# ********* read last n lines from a file **********
+
+n = 4
+with open("sample.txt") as file:
+    lines_count = 0
+    
+    for _ in file:
+        lines_count += 1
+    
+    file.seek(0)
+    res = islice(file, lines_count - n, lines_count)
+    print(list(res))
+    
+
+# deque
+
+with open("sample.txt") as file:
+    lines = deque(file, n)
+    print(list(lines))
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
