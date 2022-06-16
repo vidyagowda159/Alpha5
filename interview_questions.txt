@@ -581,6 +581,40 @@ d = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
 129 Can we have multiple __init__ methods in a class
 130 Why python is Object Oriented
 131 What are .pyc files
+132 Reverse a list without using any built-in functions and slicing
+133 Write a program to get the below output
+    # i/p = "10.20.30.40"
+    # o/p = "40.30.20.10"
+ 134 What is the difference between while loop and for loop.
+ 135 What are magic methods?
+ 136 What is pylint.
+ 137 What is the output of the below program.
+     >>> [1, 2, 3, 4] * 2
+ 138 What is the difference between the is and == operators
+ 139 What is "self" in class.
+ 140 What is assert statement. What is the difference between assert and if/else statement.
+ 141 What is the difference between a module, a package, and a library
+ 142 write a program to get the below output using while loop
+
+           1
+           12
+           123
+           1234
+143 write a program to get the below output
+           >>> items = ['$123.45', '$434.23', '$567.89']
+           >>> # o/p [123.45, 434.23, 567.89]
+144 Generator function for Fibonacci series program
+145 Write a program to print common character present in all the items of the below list
+           items = [ "glory", "glass", "sight", "fight"]
+146 Function should accept a list and if any number divisible by 3 then modify to 33 or else keep it as it is
+147  write a program to print the below pattern
+
+           1 2 3 *
+           1 2 * 4
+           1 * 3 4
+           * 2 3 4
+
+
 
 
 
