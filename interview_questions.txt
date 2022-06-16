@@ -547,7 +547,6 @@ l1 = [1, 2, 3, 4, 1, 2, 3, 4, 3, 4, 4]
 
 122 Print all the missing numbers from 1 to 10 in the below list
 
-
 **123 Write a python program to get the below output**
 ```python
 >>> l1 = [1, 2, 3]
@@ -579,34 +578,101 @@ d = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
 >>> # o/p should be ['b', 'd']
 
 129 Can we have multiple __init__ methods in a class
+
 130 Why python is Object Oriented
+    Python is object oriented because everyting in python is an object (defined as class)
+
 131 What are .pyc files
+           1. pyc files are python compiled.
+           2. Once .py file is compiled by python compiler, it generates .pyc file.
+           3. .pyc files contains byte code which is understandable by python virtual machine.
+           4. pyc files are generated when a python module is imported.
+           5. Python compiler will not compile a python module again and again unless there is a change in code.
+           6. This makes programs to run faster since byte code for a module is already generated.
+
 132 Reverse a list without using any built-in functions and slicing
+
 133 Write a program to get the below output
     # i/p = "10.20.30.40"
     # o/p = "40.30.20.10"
+    
  134 What is the difference between while loop and for loop.
+           The body of while loop gets executed until some condition is True. 
+           Once the condition if False, the control comes out of the while loop.
+
+           The body of for loop get executed for some fixed number of iterations.
+ 
  135 What are magic methods?
+           Magic methods are special methods which starts and ends with double underscores.(they are also called as dunders)
+           Magic methods are internally called by python. We can customize the behaviour of an object or class using magic methods. 
+           They are also called as protocols. 
+
+           e.g. when you ask for the length of the list len(names) internally python will call __len__ method on list object.
+
+           e.g. when you check for membership "apple" in names python internally triggers __contains__("apple")
+           
  136 What is pylint.
+           Pylint is a plugin or extension that checks for syntax errors. 
+           Also, it tries to enforce coding standards according to PEP8 style guide. 
+           It can give recommendations/suggestions/hints about types.
+ 
  137 What is the output of the below program.
      >>> [1, 2, 3, 4] * 2
+     
  138 What is the difference between the is and == operators
+           "==" operator checks if both objects have same value.
+           "is" operator checks if identity or memory address of two objects are same.
+ 
  139 What is "self" in class.
+           "self" is called as Instance or data. 
+           Every instance method of a class has "self" as first argument.
+           During runtime, "self" will be replaced with object instance of the class.
+           e.g. 
+           class Point:
+              def __init__(self, a, b):
+                  self.a = a
+                  self.b = b
+
+           p1 = Point(1, 2)
+           p2 = Point(3, 4)
+
+when you say, p1.a, "self" will be replaced with p1 and when you say p2.a, "self" will be replaced with p2.
+Internally p1 and p2 will be pointing to a dictionary which is also called instance dictionary.
+the instance dicitonary canbe accessed via __dict__ attribute. 
+e.g. p1.__dict__ , p2.__dict__
+ 
  140 What is assert statement. What is the difference between assert and if/else statement.
+           1. An assert statement is used to valdate the actual result against expected result.
+           2. If the actual result does not match with the expected result, AssertionError is raised.
+           3. if/else is not used for validating the actual result against expected result.
+           4. if/else statement will not raise any exception.  
+
  141 What is the difference between a module, a package, and a library
+           1. A module is simply a Python file that’s intended to be imported into scripts or other modules. 
+              It contains functions, classes, and global variables.
+
+           2. A package is a collection of modules that are grouped together inside a folder to provide consistent functionality. Packages can be imported just like                 modules. They usually have an __init__.py file in them.
+
+3. A library is a collection of packages.
+ 
  142 write a program to get the below output using while loop
 
            1
            12
            123
            1234
+           
 143 write a program to get the below output
            >>> items = ['$123.45', '$434.23', '$567.89']
            >>> # o/p [123.45, 434.23, 567.89]
+           
 144 Generator function for Fibonacci series program
+
 145 Write a program to print common character present in all the items of the below list
            items = [ "glory", "glass", "sight", "fight"]
+           
 146 Function should accept a list and if any number divisible by 3 then modify to 33 or else keep it as it is
+
 147  write a program to print the below pattern
 
            1 2 3 *
