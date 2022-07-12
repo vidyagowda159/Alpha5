@@ -147,7 +147,8 @@ a = [1, 2, 3, 4, 5]
 l = [[1,2,3],[4,5,6],[7,8,9]]
 
 **50 Write a program to reverse the list as below**
-words = ["hi", "hello", "python"]                                
+words = ["hi", "hello", "python"]
+>>> res = ["python", "hello", "hi"]
 
 **51 Write a program to update the tuple**
 t1 = (1, 2, 3, 4)
@@ -161,6 +162,7 @@ d = {'a': 100, 'b': {'m': 'man', 'n': 'nose', 'o': 'ox', 'c': 'cat'}}
 **53 Write a program to count the number of white spaces in a file.**
 
 **54 Grouping anagrams.**
+l = ["listen", "hello", "eat", "desserts", "silent", "peek", "ate", "keep", "tea", "stressed"]
 
 **55 What is the difference between defaultdict and normal dictionary.**
 ```python
